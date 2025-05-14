@@ -1,0 +1,97 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyM3tuJHXwxcvMT5Zi9jKKzV",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/glorivaas/Risk_Measures/blob/main/FINAL_PROJECTipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### **FINAL PROJECT**\n",
+        "# **American Option Portfolio Value-at-Risk (VaR)**"
+      ],
+      "metadata": {
+        "id": "FxsTei75rDCY"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### **INTRODUCTION**\n",
+        "  ▶ What is an **option**?\n",
+        "  \n",
+        "  An option is a financial contract that gives someone the right (but not the obligation) to buy or sell something in the future, like a stock.\n",
+        "\n",
+        "  - A call option = right to buy\n",
+        "\n",
+        "  - A put option = right to sell\n",
+        "\n",
+        "\n",
+        "▶ What is an **American Option**?\n",
+        "\n",
+        "There are two main types:\n",
+        "\n",
+        "  - European option: can only be exercised at the end\n",
+        "\n",
+        "  - American option: can be exercised at any time before or on the expiration date\n",
+        "\n",
+        "\n",
+        "▶  Why are American Options **harder to value**?\n",
+        "\n",
+        "Because we do not know when the holder will choose to exercise it. We need a smart way to decide if holding the option is better than using it right now.\n",
+        "\n",
+        "\n",
+        "▶  We introduce: **Longstaff-Schwartz Algorithm**\n",
+        "\n",
+        "This algorithm helps us estimate the best time to exercise an American option.\n",
+        "It works like this:\n",
+        "  \n",
+        "  1. Simulate multiple price paths for the underlying stock.\n",
+        "\n",
+        "  2. At each time step, calculate:\n",
+        "\n",
+        "    - The immediate payoff from exercising\n",
+        "\n",
+        "    - The expected value of holding it longer (using regression)\n",
+        "\n",
+        "    - Exercise the option if it is better than holding it.\n",
+        "\n",
+        "  3. Repeat for many paths and average results to estimate the option’s value."
+      ],
+      "metadata": {
+        "id": "l4hfFbXOsygn"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "MJxDVYCXsjL4"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
